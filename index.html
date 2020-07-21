@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Vue.js</title>
+</head>
+<body>
+    <h1>Vue.js </h1>
+    <div id="root">
+        <span v-bind:title="message">
+            {{ message }}
+        </span>
+        <p v-if="student">Hey I am a student</p>
+
+        <ul v-bind:todos="todos">
+            <li v-for="todo in todos">
+                {{ todo.task }}
+            </li>
+        </li><br /> <br />
+        <div id="form">
+            {{ userInp }} <br />
+            <input type="text" v-model="userInp"> <br /> <br />
+            {{ name }}
+            <button @click="reverseString">Reverse string</button>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
