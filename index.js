@@ -1,5 +1,7 @@
 // create a  vue instance
-
+let person = {
+    name: 'Zachy'
+}
 new Vue({
     el: '#root',
     data: {
@@ -11,7 +13,19 @@ new Vue({
             { id: 3,task: 'Learn API',completed: true }
         ],
         name: 'Moseti',
-        userInp: 'Zachy'
+        userInp: 'Zachy',
+        person,
+        url: 'https://codewithzachy.netlify.com'
+    },
+    // lifecycle methods - run code when an instance has been created
+    created() {
+        console.log(this.name)
+    },
+    // computed property
+    computed: {
+        visitPortofolio() {
+           return this.url;
+        }
     },
     methods: {
         reverseString: function() {
