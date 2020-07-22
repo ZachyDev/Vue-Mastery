@@ -22,8 +22,9 @@
         <div id="form">
             {{ userInp }} <br />
             <input type="text" v-model="userInp"> <br /> <br />
-            {{ name }}
-            <button @click="reverseString">Reverse string</button>
+            <span>Original string </span> - {{ name }} <br />
+            <button @click= "reverseMessage">Reverse string</button>
+            <span>Reversed string</span> - {{ reverseString }}
         </div>
 
         <div>

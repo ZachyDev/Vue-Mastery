@@ -23,16 +23,19 @@ new Vue({
     },
     // computed property
     computed: {
+        reverseString() {
+            return this.name.split('').reverse().join('');
+        },
         visitPortofolio() {
            return this.url;
         }
     },
     methods: {
-        reverseString: function() {
-            this.name = this.name.split('').reverse().join('');
-        },
         userInput(event) {
             this.userInp = event.target.value
+        },
+        reverseMessage: function() {
+            this.name = this.name.split('').reverse().join('');
         }
     }
 })
