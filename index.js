@@ -15,6 +15,7 @@ new Vue({
         name: 'Moseti',
         userInp: 'Zachy',
         person,
+        date: '',
         url: 'https://codewithzachy.netlify.com'
     },
     // lifecycle methods - run code when an instance has been created
@@ -36,6 +37,9 @@ new Vue({
         },
         reverseMessage: function() {
             this.name = this.name.split('').reverse().join('');
+        },
+        now(){
+            this.date = new Date().toLocaleString();
         }
     }
 })
